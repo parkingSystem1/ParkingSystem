@@ -116,6 +116,43 @@ uvicorn app.main:app --reload
 ### 클론 후 개발 방법
 
 웅 님은 클론 후 users 폴더 내부에서 앱 단위 개발을 시작해 주시면 좋을 것 같습니다. 다만 일부 공통 기능 개발이 필요한 core, db, schemas, services(mcp 연동 시 쓰임) 폴더에 넣을 파일은 같이 상의하면서 작성해야 할 것 같습니다.... 여기 적힌 구조와 내용은 추후 변동 확률 100%....
+<br><br><br>
+## 브랜치 구조
+main
+
+│
+
+├── develop (개발용 공통 브랜치)
+
+│   │
+
+│   ├── feature/users (회원 기능, 웅)
+
+│   │
+
+│   ├── feature/crud (게시판 기능, 민)
+
+│
+
+└── hotfix/urgent-fix (긴급 패치 필요할 때 생성)
+<br><br>
+우선 팀원은 터미널에 아래 명령어 입력 후 각자의 브랜치에서 개발합니다.
+
+git checkout -b feature/users
+<br><br>
+작업 후 업로드 시 아래 명령어 순서를 따르면 됩니다.
+git add .
+
+git commit -m "(ex)회원 기능 추가"
+
+git push origin feature/users
+<br><br>
+그 후 GitHub에서 Pull Request 생성하고, feature/users를 develop으로 병합 요청해서 코드 리뷰 후 승인되면 병합하는 방식으로 작업하면 될 것 같습니다.
+
+배포할 때는 develop 브랜치를 main에 병합해서 서비스를 배포하면 끝납니다.
+
+
+
 
 
 
