@@ -97,7 +97,26 @@ ParkingSystem/
 
 백엔드 팀원이 각자 독립적인 앱 단위로(users, crud 같은 것) 개발하고, 필수적인 환경설정과 데이터베이스 세팅 같은 것만 공통으로 관리하도록 하는 구조입니다.
 
-### 
+### 레포 클론, 명령어 입력 순서
+
+1. git clone https://github.com/parkingSystem1/ParkingSystem.git
+2. cd ParkingSystem
+3. python -m venv myvenv
+4. source myvenv/bin/activate
+5. pip install -r requirements.txt
+
+위와 같이 입력하면 팀원이 서 같은 환경에서 개발 시작이 가능합니다.
+
+### FastAPI 서버 실행 방법
+
+uvicorn app.main:app --reload
+
+위 명령어를 입력하면 서버가 실행이 됩니다. 위에서 설명한 myvenv 가상환경은 내 로컬에서 처음에 프로젝트에 접근할 때 최초 1회만 활성화하면 되고, 그 후로는 따로 활성화할 필요 없이 서버 실행 시 uvicorn app.main:app --reload만 입력하면 됩니다. 만약에 실행이 안 되면 가상환경을 다시 활성화하고 한번 실행해 보세요. uvicorn은 가상환경 관리랑 관계없고, ASGI를 가능하게 해 주는 FastAPI에서 자주 쓰이는 도구? 같은 거라고 합니다. 그리고 가상환경은(myvenv 같은 것) python 패키지 설치 환경을 분리해주는 도구입니다.
+
+### 클론 후 개발 방법
+
+웅 님은 클론 후 users 폴더 내부에서 앱 단위 개발을 시작해 주시면 좋을 것 같습니다. 다만 일부 공통 기능 개발이 필요한 core, db, schemas, services(mcp 연동 시 쓰임) 폴더에 넣을 파일은 같이 상의하면서 작성해야 할 것 같습니다.... 여기 적힌 구조와 내용은 추후 변동 확률 100%....
+
 
 
 
