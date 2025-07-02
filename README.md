@@ -1,6 +1,5 @@
 # ParkingSystem
 
----
 
 mcp를 활용한 AI 주차 예약 시스템
 
