@@ -105,7 +105,7 @@ ParkingSystem/
 4. source myvenv/bin/activate
 5. pip install -r requirements.txt
 
-위와 같이 입력하면 팀원이 서 같은 환경에서 개발 시작이 가능합니다.
+위와 같이 입력하면 팀원이 서로 같은 환경에서 개발 시작이 가능합니다.
 
 ### FastAPI 서버 실행 방법
 
