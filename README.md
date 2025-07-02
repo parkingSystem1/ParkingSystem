@@ -56,7 +56,11 @@ mcp를 활용한 AI 주차 예약 시스템
 
 ParkingSystem/
 ├── apps
+
+
 │   ├── users               # 회원 관리 앱 (웅)
+
+
 │   │   ├── __init__.py
 │   │   ├── router.py       # API 라우터
 │   │   ├── schemas.py      # Pydantic 스키마
