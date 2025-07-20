@@ -75,7 +75,7 @@ ParkingSystem/
 
 ├── db                      # 공통 데이터베이스 설정
 
-│   ├── base.py             # Base 클래스
+│   ├── database.py             # Base 클래스
 
 │   └── session.py          # DB 세션 관리
 
