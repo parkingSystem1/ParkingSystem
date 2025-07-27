@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const SearchContainer = styled.div`
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   //   height: 80vh;
 `;
 
 export const SearchBox = styled.div`
+  width: 350px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;

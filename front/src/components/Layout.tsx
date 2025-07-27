@@ -1,40 +1,33 @@
+import Header from "./Header";
+import Footer from "./Footer";
 import styled from "styled-components";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Wrapper>
-      <Header>헤더</Header>
+    <>
+      <Header />
       <Body>
         <Content>{children}</Content>
+        <Footer />
       </Body>
-    </Wrapper>
+    </>
   );
 };
 
 export default Layout;
 
-const Wrapper = styled.div``;
-
-const Header = styled.header`
-  width: 100%;
-  background-color: #4caf75;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 24px;
-`;
-
 const Body = styled.main`
   width: 100%;
-  margin: 0 auto;
-  background-color: white;
-  min-height: 80vh;
+  margin-top: 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  min-height: calc(100vh - 80px);
+  background-color: white;
 `;
 
 const Content = styled.div`
   width: 60%;
   min-width: 300px;
+  flex-grow: 1;
 `;
